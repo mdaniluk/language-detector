@@ -19,6 +19,7 @@ class LetterTokenizer(BaseTokenizer):
             
     def add_special_cases(self, toks): pass
 
+
 def get_tokenizer_with_vocab():
     itos = [UNK, BOS] + list(string.printable)
     vocab = Vocab(itos)
