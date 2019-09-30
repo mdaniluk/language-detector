@@ -17,14 +17,14 @@ def get_parser():
     parser.add_argument("--input", type=str, required=True, help="Path to input file")
     parser.add_argument("--train-ratio", type=float, default=0.85, help="Ratio of training size in trian/valid split")
     parser.add_argument("--bs", type=int, default=64, help="Batch size")
-    parser.add_argument("--hidden-size", type=int, default=300, help="")
-    parser.add_argument("--emb-size", type=int, default=200, help="")
-    parser.add_argument("--lm-lr", type=float, default=1e-2, help="")
-    parser.add_argument("--lm-epoch", type=int, default=10, help="")
-    parser.add_argument("--lm-encoder-name", type=str, default='lm_enc', help="")
-    parser.add_argument("--classifier-lr", type=float, default=5e-3, help="")
-    parser.add_argument("--classifier-epoch", type=int, default=50, help="")
-    parser.add_argument("--model-path", type=str, required=True, help="")
+    parser.add_argument("--hidden-size", type=int, default=300, help="Hidden size of AWD LSTM model")
+    parser.add_argument("--emb-size", type=int, default=200, help="Embeddings size of AWD LSTM model")
+    parser.add_argument("--lm-lr", type=float, default=1e-2, help="Learning rate for language model encoder")
+    parser.add_argument("--lm-epoch", type=int, default=10, help="Number of epochs for language model encoder")
+    parser.add_argument("--lm-encoder-name", type=str, default='lm_enc', help="Filename of encoder model")
+    parser.add_argument("--classifier-lr", type=float, default=5e-3, help="Learning rate for classifier")
+    parser.add_argument("--classifier-epoch", type=int, default=20, help="Number of epochs for classifier")
+    parser.add_argument("--model-path", type=str, required=True, help="Exported model path")
     return parser
 
 
