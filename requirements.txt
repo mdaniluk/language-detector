@@ -1,0 +1,6 @@
+fastai==1.0.57
+numpy==1.17.0
+starlette==0.12.9
+uvicorn==0.8.6
+pandas==0.24.0
+pyhocon==0.3.51
