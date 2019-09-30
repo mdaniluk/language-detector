@@ -21,6 +21,15 @@ Example of curl:
 curl -X POST -H "Content-Type:application/json" 'http://0.0.0.0:8010/predict' 
 --data '{"text": "#include <iostream>"}'
 ```
+
+Running service from docker:
+```bash
+docker build -t detectorService -f DockerfileService .
+```
+```bash
+docker run --rm -it detectorService python app.py application.conf
+```
+
 Further improvements:
 - Compare with baseline models such as CNN, N-grams features
 - Try different tokenizations instead of just on letters
