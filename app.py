@@ -15,7 +15,6 @@ model = load_learner(path= '.', file=conf.model_file_name)
 async def predict(request):
     data = await request.json()
     text = data['text']
-    print (text)
     output = model.predict(text)
     return JSONResponse(str(output[0]))
 
