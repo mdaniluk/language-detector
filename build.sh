@@ -1,1 +1,1 @@
-nvidia-docker build -t tmp .
+nvidia-docker build -t detector .
